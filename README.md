@@ -1,0 +1,2 @@
+# StringRegExp
+ConsoleWrite("! " &amp; @AutoItVersion &amp; @CRLF)  _Example3()  Func _Example3()     Local Const $s_RegExp = _ ; $s_RegExp comes from Func _PathSplit(             '^\h*((?:\\\\\?\\)*(\\\\[^\?\/\\]+|[A-Za-z]:)?(.*[\/\\]\h*)?((?:[^\.\/\\]|(?(?=\.[^\/\\]*\.)\.))*)?([^\/\\]*))$'      Local $sString = 'xxxxxxxxxx'     For $iCounter = 1 To 11         ConsoleWrite("- step #" &amp; $iCounter &amp; ' StringLen= ' &amp; StringLen($sString) &amp; @CRLF)         StringRegExp($sString, $s_RegExp, 0)         $sString &amp;= $sString     Next EndFunc   ;==>_Exampl
